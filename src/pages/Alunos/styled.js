@@ -29,4 +29,5 @@ export const NovoAluno = styled(Link)`
   padding: 10px;
   text-align: start;
   font-size: 20px;
+  margin-top: 10px;
 `;
