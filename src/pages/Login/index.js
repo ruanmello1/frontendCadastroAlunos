@@ -52,6 +52,7 @@ export default function Login(props) {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder="E-mail:"
           />
         </label>
         <label htmlFor="password">

@@ -9,6 +9,11 @@ export const AlunoContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 5px 0;
+
+    div {
+      display: flex;
+      margin-bottom: 2px;
+    }
   }
 
   div + div {
@@ -29,5 +34,13 @@ export const NovoAluno = styled(Link)`
   padding: 10px;
   text-align: start;
   font-size: 20px;
+  margin-top: 10px;
+`;
+
+export const ButtonSection = styled.div`
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
 `;

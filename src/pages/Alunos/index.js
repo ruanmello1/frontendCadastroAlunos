@@ -12,7 +12,13 @@ import { toast } from 'react-toastify';
 
 import { Container } from '../../styles/GlobalStyles';
 import axios from '../../services/axios';
-import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
+import history from '../../services/history';
+import {
+  AlunoContainer,
+  ProfilePicture,
+  NovoAluno,
+  ButtonSection,
+} from './styled';
 
 import Loading from '../../components/Loading';
 
@@ -50,6 +56,8 @@ export default function Alunos() {
 
       if (status === 401) {
         toast.error('Você precisa fazer login');
+        history.push('/login/');
+        setIsLoading(false);
         return;
       } else {
         toast.error('Ocorreu um erro ao excluir aluno');
@@ -82,20 +90,26 @@ export default function Alunos() {
             <span>{aluno.nome}</span>
             <span>{aluno.email}</span>
 
-            <Link to={`/aluno/${aluno.id}/edit`}>
-              <FaEdit size={16} />
-            </Link>
+            <ButtonSection>
+              <Link to={`/aluno/${aluno.id}/edit`}>
+                <div className="editButton">
+                  <FaEdit size={16} />
+                </div>
+              </Link>
 
-            <Link onClick={handleDeleteAsk} to={`/aluno/${aluno.id}/delete`}>
-              <FaWindowClose size={16} />
-            </Link>
+              <Link onClick={handleDeleteAsk} to={`/aluno/${aluno.id}/delete`}>
+                <div>
+                  <FaWindowClose size={16} />
+                </div>
+              </Link>
 
-            <FaExclamation
-              size={16}
-              display="none"
-              cursor="pointer"
-              onClick={(e) => handleDelete(e, aluno.id)}
-            />
+              <FaExclamation
+                size={16}
+                display="none"
+                cursor="pointer"
+                onClick={(e) => handleDelete(e, aluno.id)}
+              />
+            </ButtonSection>
           </div>
         ))}
       </AlunoContainer>
