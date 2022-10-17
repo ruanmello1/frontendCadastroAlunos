@@ -40,7 +40,7 @@ export default function Register() {
       toast.error('E-mail inválido.');
     }
 
-    if (!id && (password.length < 3 || password.length > 255)) {
+    if (!id && (password.length < 6 || password.length > 255)) {
       formErrors = true;
       toast.error('Senha deve ter entre 6 e 50 caracteres.');
     }

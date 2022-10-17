@@ -16,8 +16,34 @@ export const AlunoContainer = styled.div`
     }
   }
 
-  div + div {
+  div + .adicionaBorder {
     border-top: 1px solid #eee;
+  }
+
+  .divNome {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .divEmail {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .alunoNome {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90px;
+  }
+
+  .alunoEmail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
   }
 `;
 
@@ -42,5 +68,5 @@ export const ButtonSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
+  margin-top: 7px;
 `;

@@ -123,7 +123,7 @@ export default function Aluno({ match }) {
       const status = get(err, 'response.status', 0);
       const data = get(err, 'response.data', {});
       const errors = get(data, 'errors', []);
-
+      setIsLoading(false);
       if (errors.length > 0) {
         errors.map((error) => toast.error(error));
       } else {

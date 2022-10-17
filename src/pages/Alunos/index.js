@@ -78,7 +78,7 @@ export default function Alunos() {
 
       <AlunoContainer>
         {alunos.map((aluno) => (
-          <div key={String(aluno.id)}>
+          <div className="adicionaBorder" key={String(aluno.id)}>
             <ProfilePicture>
               {get(aluno, 'Fotos[0].url', false) ? (
                 <img crossOrigin="" src={aluno.Fotos[0].url} alt="" />
@@ -87,8 +87,12 @@ export default function Alunos() {
               )}
             </ProfilePicture>
 
-            <span>{aluno.nome}</span>
-            <span>{aluno.email}</span>
+            <div className="divNome">
+              <span className="alunoNome">{aluno.nome}</span>
+            </div>
+            <div className="divEmail">
+              <span className="alunoEmail">{aluno.email}</span>
+            </div>
 
             <ButtonSection>
               <Link to={`/aluno/${aluno.id}/edit`}>
