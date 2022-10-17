@@ -23,13 +23,13 @@ export const AlunoContainer = styled.div`
   .divNome {
     width: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .divEmail {
     width: 250px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .alunoNome {
