@@ -49,7 +49,7 @@ export default function Alunos() {
     try {
       setIsLoading(true);
       await axios.delete(`/alunos/${id}`);
-      e.target.parentElement.remove();
+      e.target.parentElement.parentElement.remove();
       setIsLoading(false);
     } catch (err) {
       const status = get(err, 'response.status', []);
