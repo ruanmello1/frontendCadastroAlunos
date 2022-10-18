@@ -21,13 +21,13 @@ export const AlunoContainer = styled.div`
   }
 
   .divNome {
-    width: 100px;
+    width: 90px;
     display: flex;
     justify-content: flex-start;
   }
 
   .divEmail {
-    width: 130px;
+    width: 300px;
     display: flex;
     justify-content: flex-start;
   }
@@ -36,7 +36,6 @@ export const AlunoContainer = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 90px;
   }
 
   .alunoEmail {
@@ -45,9 +44,13 @@ export const AlunoContainer = styled.div`
     text-overflow: ellipsis;
   }
 
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
     .divEmail {
-      width: 300px;
+      width: 130px;
+    }
+
+    .divNome {
+      margin-left: 10px;
     }
   }
 `;
