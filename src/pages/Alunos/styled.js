@@ -27,7 +27,7 @@ export const AlunoContainer = styled.div`
   }
 
   .divEmail {
-    width: 250px;
+    width: 150px;
     display: flex;
     justify-content: flex-start;
   }
