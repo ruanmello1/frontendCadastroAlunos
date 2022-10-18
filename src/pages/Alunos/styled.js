@@ -27,7 +27,7 @@ export const AlunoContainer = styled.div`
   }
 
   .divEmail {
-    width: 150px;
+    width: 130px;
     display: flex;
     justify-content: flex-start;
   }
@@ -43,7 +43,12 @@ export const AlunoContainer = styled.div`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 250px;
+  }
+
+  @media (min-width: 600px) {
+    .divEmail {
+      width: 300px;
+    }
   }
 `;
 
