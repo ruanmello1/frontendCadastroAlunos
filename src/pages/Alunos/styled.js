@@ -50,7 +50,7 @@ export const AlunoContainer = styled.div`
     }
 
     .divNome {
-      margin-left: 10px;
+      margin-left: 20px;
     }
   }
 `;
