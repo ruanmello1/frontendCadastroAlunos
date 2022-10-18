@@ -51,6 +51,7 @@ export const AlunoContainer = styled.div`
 
     .divNome {
       margin-left: 20px;
+      width: 60px;
     }
   }
 `;
