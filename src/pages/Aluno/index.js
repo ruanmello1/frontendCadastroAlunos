@@ -93,6 +93,8 @@ export default function Aluno({ match }) {
       formErrors = true;
     }
 
+    console.log(altura);
+
     if (formErrors) return;
     try {
       setIsLoading(true);
@@ -182,13 +184,13 @@ export default function Aluno({ match }) {
         <input
           type="text"
           value={peso}
-          onChange={(e) => setPeso(e.target.value)}
+          onChange={(e) => setPeso(e.target.value.replace(',', '.'))}
           placeholder="Peso"
         />
         <input
           type="text"
           value={altura}
-          onChange={(e) => setAltura(e.target.value)}
+          onChange={(e) => setAltura(e.target.value.replace(',', '.'))}
           placeholder="Altura"
         />
         <button type="submit">Enviar</button>
