@@ -93,8 +93,6 @@ export default function Aluno({ match }) {
       formErrors = true;
     }
 
-    console.log(altura);
-
     if (formErrors) return;
     try {
       setIsLoading(true);
